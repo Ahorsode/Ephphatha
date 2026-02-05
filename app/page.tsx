@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { impactStats, programs, missionPoints } from "./data";
+import { impactStats, programs, missionPoints, teamMembers } from "./data";
 
 export default function Home() {
   return (
@@ -86,22 +86,56 @@ export default function Home() {
             <span className="section-label" style={{ color: "var(--cream)" }}>Our Impact</span>
             <h2 className="section-title">Making a Difference</h2>
           </div>
-          <div className="stats-grid">
-            <div className="stat-item">
-              <div className="stat-number">{impactStats.livesChanged.toLocaleString()}+</div>
-              <div className="stat-label">Lives Changed</div>
+          <div className="marquee-container">
+            <div className="marquee-content" style={{ "--animation-duration": "20s" } as React.CSSProperties}>
+              {[...Array(2)].map((_, i) => (
+                <div key={i} className="stats-grid marquee-item">
+                  <div className="stat-item">
+                    <div className="stat-number">{impactStats.livesChanged.toLocaleString()}+</div>
+                    <div className="stat-label">Lives Changed</div>
+                  </div>
+                  <div className="stat-item">
+                    <div className="stat-number">{impactStats.successRate}%</div>
+                    <div className="stat-label">Success Rate</div>
+                  </div>
+                  <div className="stat-item">
+                    <div className="stat-number">{impactStats.schoolsSupported}</div>
+                    <div className="stat-label">Schools Supported</div>
+                  </div>
+                  <div className="stat-item">
+                    <div className="stat-number">{impactStats.volunteers}+</div>
+                    <div className="stat-label">Volunteers</div>
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="stat-item">
-              <div className="stat-number">{impactStats.successRate}%</div>
-              <div className="stat-label">Success Rate</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">{impactStats.schoolsSupported}</div>
-              <div className="stat-label">Schools Supported</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">{impactStats.volunteers}+</div>
-              <div className="stat-label">Volunteers</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="section team-section" style={{ background: "white" }}>
+        <div className="container">
+          <div className="section-header">
+            <span className="section-label">Our Leadership</span>
+            <h2 className="section-title">Meet the Team</h2>
+            <p className="section-desc">
+              Dedicated individuals committed to transforming lives and communities.
+            </p>
+          </div>
+          <div className="marquee-container">
+            <div className="marquee-content" style={{ "--animation-duration": "25s" } as React.CSSProperties}>
+              {[...Array(2)].map((_, i) => (
+                <div key={i} className="marquee-item" style={{ display: "flex", gap: "var(--space-lg)" }}>
+                  {teamMembers.map((member, index) => (
+                    <div key={index} className="team-card" style={{ minWidth: "280px" }}>
+                      <div className="team-avatar">{member.avatar}</div>
+                      <h3>{member.name}</h3>
+                      <p className="team-role">{member.role}</p>
+                    </div>
+                  ))}
+                </div>
+              ))}
             </div>
           </div>
         </div>
