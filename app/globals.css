@@ -318,6 +318,7 @@ img {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }
@@ -700,7 +701,6 @@ img {
   background: rgba(255, 255, 255, 0.05);
   border-radius: var(--radius-lg);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: var(--transition-base);
 }
 

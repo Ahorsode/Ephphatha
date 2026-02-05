@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 import { teamMembers, values, impactStats } from "../data";
 
@@ -61,23 +62,29 @@ export default function AboutPage() {
             </section>
 
             {/* Team Section */}
-            <section className="section" style={{ background: "white" }}>
+            <section className="section team-section" style={{ background: "white" }}>
                 <div className="container">
                     <div className="section-header">
-                        <span className="section-label">Meet The Team</span>
-                        <h2 className="section-title">Leadership</h2>
+                        <span className="section-label">Our Leadership</span>
+                        <h2 className="section-title">Meet the Team</h2>
                         <p className="section-desc">
                             Dedicated individuals committed to transforming lives and communities.
                         </p>
                     </div>
-                    <div className="team-grid">
-                        {teamMembers.map((member, index) => (
-                            <div key={index} className="team-card">
-                                <div className="team-avatar">{member.avatar}</div>
-                                <h3>{member.name}</h3>
-                                <p className="team-role">{member.role}</p>
-                            </div>
-                        ))}
+                    <div className="marquee-container">
+                        <div className="marquee-content" style={{ "--animation-duration": "25s" } as React.CSSProperties}>
+                            {[...Array(2)].map((_, i) => (
+                                <div key={i} className="marquee-item" style={{ display: "flex", gap: "var(--space-lg)" }}>
+                                    {teamMembers.map((member, index) => (
+                                        <div key={index} className="team-card" style={{ minWidth: "280px" }}>
+                                            <div className="team-avatar">{member.avatar}</div>
+                                            <h3>{member.name}</h3>
+                                            <p className="team-role">{member.role}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>

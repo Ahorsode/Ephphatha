@@ -42,36 +42,36 @@ export const programs = [
 export const missionPoints = [
     {
         icon: "✨",
-        title: "Dignity",
-        description: "Restoring self-worth and value to every individual, regardless of their past circumstances.",
+        title: "Dignity for All",
+        description: "Every person is worthy of respect and restoration.",
     },
     {
         icon: "📖",
-        title: "Education",
-        description: "Providing quality learning opportunities to underserved children and communities.",
+        title: "Equity in Opportunity",
+        description: "We believe both adults and children deserve access to tools for growth.",
     },
     {
         icon: "🌟",
-        title: "Hope",
-        description: "Creating pathways to brighter futures through practical support and genuine care.",
+        title: "Restoration Over Rejection",
+        description: "We champion healing and new beginnings for the marginalized.",
     },
 ];
 
 export const teamMembers = [
     {
-        name: "Rev. Michael Johnson",
-        role: "Founder & Executive Director",
-        avatar: "👨‍💼",
-    },
-    {
-        name: "Sarah Williams",
-        role: "Program Director",
+        name: "Fati Suleman",
+        role: "Secretary & Board Member",
         avatar: "👩‍💼",
     },
     {
-        name: "David Chen",
-        role: "Education Coordinator",
-        avatar: "👨‍🏫",
+        name: "Charmaine Afoah Odame",
+        role: "Board Member",
+        avatar: "👩‍💼",
+    },
+    {
+        name: "Phyllis Abui Fletcher",
+        role: "Board Member",
+        avatar: "👩‍💼",
     },
 ];
 
@@ -79,22 +79,32 @@ export const values = [
     {
         icon: "💜",
         title: "Dignity for All",
-        description: "Every person deserves to be treated with respect and compassion.",
+        description: "Every person is worthy of respect and restoration.",
     },
     {
         icon: "🔄",
-        title: "Second Chances",
-        description: "We believe in the power of transformation and new beginnings.",
+        title: "Restoration Over Rejection",
+        description: "We champion healing and new beginnings.",
     },
     {
         icon: "🏘️",
-        title: "Community",
-        description: "Together we can create lasting change in our neighborhoods.",
+        title: "Community & Compassion",
+        description: "Change happens through relationships.",
     },
     {
         icon: "🙏",
         title: "Faith in Action",
-        description: "Our beliefs inspire us to serve and uplift those in need.",
+        description: "Our work is inspired by love, mercy, and justice.",
+    },
+    {
+        icon: "📚",
+        title: "Empowerment Through Education",
+        description: "Learning transforms lives.",
+    },
+    {
+        icon: "⚖️",
+        title: "Equity in Opportunity",
+        description: "We believe both adults and children deserve access to tools for growth.",
     },
 ];
 
@@ -106,8 +116,9 @@ export const donationImpacts = [
 ];
 
 export const contactInfo = {
-    address: "123 Charity Way\nCity, State 12345",
-    phone: "(123) 456-7890",
-    email: "info@ephphatha.org",
+    address: "Fourth Russia Street, Tamale\nBox TL 2012, Northern Region, Ghana",
+    phone: "0500631555 / 0594508750",
+    email: "ephphathaopendoorinitiativelbg@gmail.com",
     hours: "Monday-Friday: 9am-5pm\nSaturday: 10am-2pm\nSunday: Closed",
+    digitalAddress: "NT-0103-5683",
 };
